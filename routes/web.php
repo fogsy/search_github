@@ -10,7 +10,12 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::prefix('search')->group(function () {
+    Route::get('user', 'SearchController@user');
+    Route::get('followers', 'SearchController@followers');
+});
 
 Route::get('/', function () {
     return view('welcome');
 });
+ 
